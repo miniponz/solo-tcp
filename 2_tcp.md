@@ -1,5 +1,10 @@
 # TCP
 
+Client checks whether can send Server data, then whther Server can send data, then acknowledges the path.
+- this is like a tripple handshake.
+
+
+
 ## Create a TCP server
 
 * Use `createServer` to create a new TCP server
