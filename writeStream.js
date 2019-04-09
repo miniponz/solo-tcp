@@ -21,7 +21,6 @@ const rs = fs.createReadStream('./spot.json', {
   encoding: 'utf8',
 }); //emits a data event
   
-  
 rs.on('data', data => {
   console.log(data);
 });

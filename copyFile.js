@@ -4,10 +4,14 @@ const rs = fs.createReadStream('./spot.json', {
   encoding: 'utf8'
 });
 
+const ws = fs.createWriteStream('./copy.json');
+
 rs.on('data', data => {
-  const ws = fs.createWriteStream('./copy.json', {
-    
-  });
   ws.write(data);
 });
+
+rs.on('end', () => {
+  ws.end();
+});
+
 
