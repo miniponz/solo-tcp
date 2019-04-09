@@ -1,7 +1,13 @@
 const net = require('net');
 
-const server = net.createServer(() => {
+//every client is a socket(node.js doc term), but is a particular client connecting to server.
+const server = net.createServer(client => {
   console.log('client connected');
+  client.on('data', data => {
+    console.log(data.toString());
+  });
 });
 
-server.listen(1919);
+server.listen(5446);
+
+
