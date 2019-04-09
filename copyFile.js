@@ -6,8 +6,8 @@ const rs = fs.createReadStream('./spot.json', {
 
 const ws = fs.createWriteStream('./copy.json');
 
-rs.on('data', data => {
-  ws.write(data);
+rs.on('data', chunk => {
+  ws.write(chunk);
 });
 
 rs.on('end', () => {
