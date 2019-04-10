@@ -1,5 +1,5 @@
 const net = require('net');
-const readline = require('readline'); //gives command line tool
+const readline = require('readline'); 
 
 const rl = readline.createInterface({
   input: process.stdin,

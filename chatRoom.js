@@ -10,9 +10,6 @@ class ChatRoom {
   getClient(username) {
     this.clients.get(username);
   }
-  all() {
-    //returns all in this.clients
-  }
 }
 
 module.exports = { ChatRoom };
